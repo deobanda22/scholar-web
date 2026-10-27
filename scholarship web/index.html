@@ -110,38 +110,77 @@
     .gallery-note { margin: 13px 0 0; color: var(--muted); font-size: .76rem; }
 
     :root {
-      --ink: #123b5b;
-      --muted: #587085;
-      --green: #063d69;
-      --green-light: #e8f0f6;
-      --gold: #a8862a;
-      --paper: #f3f3f2;
-      --line: #e0e3e5;
-      --shadow: 0 12px 32px rgb(18 59 91 / 8%);
+      --ink: #17364b;
+      --muted: #617583;
+      --green: #0c5360;
+      --green-light: #e6f1ef;
+      --gold: #efbd62;
+      --paper: #f7f8f6;
+      --line: #e1e8e7;
+      --shadow: 0 18px 45px rgb(23 54 75 / 10%);
     }
-    .topbar { background: #063d69; }
-    .hero { background: linear-gradient(115deg, #f3f3f2 0%, #fff 58%, #e8edf0 100%); }
-    .hero-card {
-      overflow: hidden;
+    body { background: var(--paper); }
+    .topbar { background: #12384c; }
+    header { box-shadow: 0 5px 22px rgb(23 54 75 / 4%); }
+    .brand-mark { border-radius: 13px 13px 13px 4px; }
+    .nav-links a { transition: color .18s ease; }
+    .hero {
+      padding-block: 88px 91px;
       background:
-        linear-gradient(90deg, rgb(6 45 64 / 94%) 0%, rgb(6 45 64 / 82%) 52%, rgb(6 45 64 / 38%) 100%),
-        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85") center / cover;
+        radial-gradient(ellipse at 86% 34%, rgb(239 189 98 / 23%), transparent 25%),
+        linear-gradient(120deg, #f1f5f1 0%, #fbfaf6 56%, #e6f0ed 100%);
     }
-    .routes, .scholarships { background: #f0f0ef; }
-    .listing { overflow: hidden; min-height: 0; padding: 0; border: 0; border-radius: 0; background: #fff; box-shadow: 0 5px 18px rgb(18 59 91 / 6%); }
-    .listing-image { width: 100%; height: 118px; display: block; object-fit: cover; }
-    .listing-content { display: flex; flex: 1; flex-direction: column; padding: 17px 18px 19px; }
-    .listing-tag { margin-bottom: 8px; border-radius: 0; padding: 3px 8px; }
-    .listing h3 { color: #063d69; font-size: 1.08rem; }
-    .listing a { color: #785d18; }
-    .route-card { border-radius: 0; }
-    .gallery .section-heading { max-width: none; text-align: center; }
-    .gallery .section-heading .eyebrow { color: #98771d; }
-    .gallery h2.section-title { color: #98771d; font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: clamp(2.4rem, 5vw, 3.5rem); letter-spacing: 0; }
-    .gallery-card { border-radius: 0; }
-    .steps { background: #063d69; }
-    .button { border-radius: 3px; }
-    form, .contact-box, .fee-box { border-radius: 3px; }
+    h1 { max-width: 610px; font-size: clamp(3rem, 6vw, 5.2rem); }
+    h1 em { color: #a96d22; }
+    .hero-copy { max-width: 540px; font-size: 1.12rem; }
+    .hero-card {
+      min-height: 390px;
+      padding: 34px;
+      border: 1px solid rgb(255 255 255 / 14%);
+      border-radius: 22px;
+      background:
+        linear-gradient(90deg, rgb(8 43 53 / 94%) 0%, rgb(8 43 53 / 78%) 56%, rgb(8 43 53 / 35%) 100%),
+        url("image/1.jpg") center 42% / cover;
+    }
+    .hero-card h2 { font-size: 2.2rem; }
+    .trust-row { box-shadow: 0 12px 28px rgb(23 54 75 / 4%); }
+    .trust-icon { background: #e8f2ed; }
+    .routes { background: #f0f4f1; }
+    .scholarships, .gallery { background: #fff; }
+    .listing {
+      overflow: hidden;
+      min-height: 0;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgb(23 54 75 / 5%);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .listing:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .listing-image { width: 100%; height: 150px; display: block; object-fit: cover; }
+    .listing-content { display: flex; flex: 1; flex-direction: column; padding: 19px 20px 21px; }
+    .listing-tag { margin-bottom: 9px; border-radius: 99px; padding: 4px 10px; }
+    .listing h3 { color: var(--ink); }
+    .listing a { color: #8a641c; }
+    .route-card {
+      min-height: 220px;
+      border-color: #e3eae6;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgb(23 54 75 / 4%);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .route-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .gallery .section-heading { max-width: 720px; margin-inline: auto; text-align: center; }
+    .gallery h2.section-title { color: var(--ink); font-style: normal; font-size: clamp(2.2rem, 4vw, 3.2rem); }
+    .gallery-card { border-radius: 14px; }
+    .gallery-card img { transition: transform .45s ease; }
+    .steps { background: #12384c; }
+    .button { border-radius: 8px; }
+    form, .contact-box, .fee-box { border-radius: 14px; }
+    input, select, textarea { border-color: #d9e3e1; border-radius: 8px; }
+    .contact-box { background: #eaf2ee; }
+    footer { background: #102f3c; }
 
     .steps { background: var(--green); color: #fff; }
     .steps .eyebrow { color: var(--gold); }
